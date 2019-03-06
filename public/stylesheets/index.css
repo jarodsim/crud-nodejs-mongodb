@@ -1,0 +1,60 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font: 14px 'Oswald', Helvetica, Arial, sans-serif;
+  background-color: white;
+}
+
+/*-------TABELA-------------*/
+
+/*DIV CORPO DO SITE*/
+
+#corpo {
+  width: auto;
+  max-width: 850px;
+  height: auto;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+}
+
+/*TABELA*/
+
+table {
+  margin: 5% auto auto auto;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid black;
+  min-width: 720px;
+}
+td{
+  padding: 1px 3px 1px 3px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+thead{
+  background-color: #0984e3;
+  color: white;
+}
+
+/*--------TEXTOS DO SITE-----------*/
+
+h1 {
+  text-align: center;
+}
+
+.butoes_links {
+  color: #0984e3;
+  text-decoration: none;
+  margin: 20px 0% 0% 0%;
+  border: 1px solid #74b9ff;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: white;
+}
+a{
+  text-decoration: none;
+  color: #0984e3;
+}

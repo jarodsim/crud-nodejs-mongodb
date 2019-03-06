@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cadastro de novo produto</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Css -->
+        <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/cadastro.css">
+
+        <!-- Fonte de texto -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="corpo">
+            <h1>
+                Cadastro de novo Produto
+            </h1>
+            <form action="<%= action %>" method="POST">
+                <label>
+                    <p>
+                        Nome do Produto: <input type="text" name="nome" placeholder="nome do produto" required>
+                    </p>
+                </label>
+                <label>
+                    <p>
+                        Quantidade do Produto: <input type="number" name="quantidade" placeholder="quantidade do produto" required>
+                    </p>
+                </label>
+                <label>
+                    <p>Descrição do Produto</p>
+                    <p>
+                        <textarea name="descricao" cols="80%" rows="5"
+                            placeholder="descreva o produto brevemente" required></textarea>
+                    </p>
+                </label>
+
+                <p> <input type="submit" value="Cadastrar" id="butao_cadastrar"></p>
+                <p><a href="/">Cancelar</a></p>
+            </form>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,70 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font: 14px 'Oswald', Helvetica, Arial, sans-serif;
+    background-color: white;
+}
+
+/*-----------CORPO DO FORMULARIO E SITE EM SI--------------*/
+
+#corpo {
+    width: auto;
+    margin: 50px auto auto auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    max-width: 850px;
+    text-align: center;
+}
+
+/*--------TEXTOS E LINKS------------*/
+
+a {
+    text-decoration: none;
+    margin: 18px;
+}
+
+#butao_cadastrar {
+    color: #0984e3;
+    text-decoration: none;
+    margin: 20px 0% 0% 0%;
+    border: 1px solid #74b9ff;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    width: 50%;
+}
+
+textarea {
+    resize: none;
+    border-color: #0984e3;
+}
+
+/*-------------INPUT----------------*/
+
+input {
+    width: 70%;
+    border: none;
+    border-bottom: 1px solid #0984e3;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+/*-------PARA TAMANHO DE TELA MENOR---------------*/
+
+@media screen and (max-width: 450px) {
+    #butao_cadastrar {
+        width: 100%;
+    }
+    #corpo {
+        width: 100%;
+    }
+    input {
+        width: 100%;
+    }
+    textarea {
+        width: 100%;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Lista de Produtos</title>
+    <!-- Css -->
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+
+    <!-- Fonte de texto -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  </head>
+  <script type="text/javascript">
+    var tamanhoTela = screen.width;
+
+    if (tamanhoTela <= 500) {
+      alert('Tamanho da tela muito pequeno para visualização completa!');
+    }
+  </script>
+
+  <body>
+    <!-- Corpo do site, tabela e tudo que for visivel ao usuário. o site em si -->
+    <div id="corpo">
+      <h1>
+        Lista de Produtos
+      </h1>
+      <table>
+        <thead>
+          <tr>
+            <td colspan="1">ID</td>
+            <td colspan="1">Nome</td>
+            <td colspan="1">Quantidade</td>
+            <td colspan="3">Descrição</td>
+            <td colspan="1">Acões</td>
+          </tr>
+        </thead>
+        <tbody>
+          <%if(!docs||docs.lenght == 0){%>
+          <tr>
+            <td>Nenhum Produto cadastrado</td>
+          </tr>
+          <tr>
+            <%}else{
+              docs.forEach(function(customer){%>
+            <td colspan="1"><%=customer._id%></td>
+            <td colspan="1"><%=customer.nome%></td>
+            <td colspan="3"><%=customer.quantidade%></td>
+            <td colspan="1"><%=customer.descricao%></td>
+            <td>
+
+              <a href="/edit/<%=customer._id%>">Editar</a>
+              <br>
+              <a href="/excluir/<%=customer._id%>"
+                onclick="return confirm('Tem certeza que deseja excluir o produto: ');">Excluir</a>
+            </td>
+          </tr>
+          <%
+        })}
+          %>
+        </tbody>
+      </table>
+
+      <p>
+        <a href="/cadastro" class="butoes_links">Cadastrar Produto</a>
+      </p>
+    </div>
+  </body>
+
+</html>
